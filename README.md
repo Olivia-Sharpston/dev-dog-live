@@ -2,6 +2,8 @@
 
 🦭Cumbie CIS 376 Web Dev Spring '25 Midterm Dev Exam
 
+author: Barry and Olivia Sharpston
+https://github.com/barrycumbie/dev-dog
 ### Resources
 
 - Internet, past projects, and all
