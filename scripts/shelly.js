@@ -40,9 +40,10 @@ $(function() {
       else if(shoeNo !== win){
         // TODO: 🐶14. Make the score go DOWN by one point if they lose
         // score ????; 
+        score -= 1;
 
         // TODO: 🐶15. my colors aren't working like I want
-        $(this).removeClass('loseColor').addClass('winColor');
+        $(this).removeClass('winColor').addClass('loseColor');
 
         $('#gameResult').text('u not win'); //you lose!
       }
@@ -51,6 +52,7 @@ $(function() {
       }
   });
    // TODO: 🐶16. whew, that's a long IIFE in a method. Let's add a comment to let us know we've finsihed it (use that cool up arrow thing like at the end of the doc ready f/n)
+//↑ends draggable IIFE 
 
   $('#replay').on('click', (e)=>{
     //todo: set all my shoes bak to normal color
@@ -68,13 +70,23 @@ $(function() {
 
   $('#reset').on('click', (e)=>{
     // TODO: 🐶17. I ran out of time, help me reset the game. 
+    alert("this will reset your score");
 
-    // TODO: 🐶18. warn the user that this will reset their score (+5 if not use alert method)  
+    score = 0;
+    $('.shoe').removeClass('winColor').removeClass('loseColor'); 
+    win = getWin(); //get a new random show number
+    //shelly's on the move again
+    $('#shellySeal').draggable('enable');
+    //todo: remove text
+    $('#gameResult').text(''); 
+    $('#score').text(score); 
+    // TODO: 🐶18. warn the user that this will reset their score (+5 if not use alert method) 
+    
   });
 
 
   // I wonder what this is for? 
-  $('#secretSeal').on('click', ()=>{score =89978798978}); 
-
+  $('#secretSeal').on('click', ()=>{score =4782}); 
+  $('#score').text(score); 
 });
 //↑ends doc ready f/n
